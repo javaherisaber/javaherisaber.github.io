@@ -32,14 +32,79 @@
   <title>WordUp</title>
   <link rel="manifest" href="manifest.json">
 
+  <!-- First time loading style -->
+  <style>
+        .loading {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .loader {
+          border: 8px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 8px solid #00AD87;
+          border-right: 8px solid #C30E48;
+          border-bottom: 8px solid #00AD87;
+          border-left: 8px solid #C30E48;
+          width: 60px !important;
+          height: 60px !important;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+        }
+
+        .waiting {
+            margin-top: 30px;
+            font-size: 16px;
+            color: black;
+        }
+
+        @-webkit-keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+  </style>
+
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '598439252';
+    var serviceWorkerVersion = '3766519105';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+<!-- First time loading -->
+<div class="loading">
+  <div class="loader"></div>
+  <p class="waiting">Please wait, loading...</p>
+</div>
+<!-- Ensure first time loading progress is gone after app loads -->
+<script>
+    window.addEventListener("flutter-first-frame", function() {
+        var element = document.getElementsByClassName("loading");
+        element[0].parentNode.removeChild(element[0]);
+    });
+</script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
