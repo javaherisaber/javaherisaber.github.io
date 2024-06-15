@@ -1,10 +1,112 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>BuildToApp</title>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildToApp - Mobile Application Development</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<object data="assets/resume.pdf" width="100%" height="100%" type="application/pdf"></object>
+    <header>
+        <div class="container">
+            <div class="logo">BuildToApp</div>
+            <nav style="display: flex;align-items: center;">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Building Exceptional Mobile Applications</h1>
+            <p>We create mobile apps that help businesses grow and thrive.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service">
+                    <img src="images/android-development.jpg" alt="Android Development">
+                    <h3>Android Development</h3>
+                    <p>Creating high-quality Android applications tailored to your business needs.</p>
+                </div>
+                <div class="service">
+                    <img src="images/ios-development.jpg" alt="iOS Development">
+                    <h3>iOS Development</h3>
+                    <p>Developing user-friendly iOS applications with exceptional performance.</p>
+                </div>
+                <div class="service">
+                    <img src="images/flutter-development.jpg" alt="Flutter Development">
+                    <h3>Flutter Development</h3>
+                    <p>Building cross-platform apps using Flutter for a seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>BuildToApp is dedicated to creating innovative mobile solutions that drive success for businesses. Our team of experts works closely with clients to bring their vision to life.</p>
+            <img src="images/about-us.jpg" alt="About Us">
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p>Check out some of our recent projects.</p>
+            <div class="portfolio-item">
+                <img src="images/portfolio-1.jpg" alt="Project 1">
+                <h3>Personal app</h3>
+                <p>A successful mobile app for a personal business.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/portfolio-2.jpg" alt="Project 2">
+                <h3>Healthcare</h3>
+                <p>A cutting-edge app for a healthcare provider.</p>
+            </div>
+            <!-- Add more portfolio items as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="mailto:contact@buildtoapp.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Email: contact@buildtoapp.com</p>
+            <p>Phone: +1(915) 229-4531</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BuildToApp. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
